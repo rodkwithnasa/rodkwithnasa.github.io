@@ -119,7 +119,7 @@ h4 {
 .footer h3 span {
   color: #aaa;
 }
-.footer-nav li {
+.footer-nav > li {
   display: inline-block;
   margin: 2em 1em 0;
 }
