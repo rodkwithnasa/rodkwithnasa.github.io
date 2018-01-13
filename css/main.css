@@ -119,7 +119,7 @@ h4 {
 .footer h3 span {
   color: #aaa;
 }
-.footer-nav li {
+.footer-nav > li {
   display: inline-block;
   margin: 2em 1em 0;
 }
@@ -540,13 +540,31 @@ h4 {
   background-color: rgba(0,0,0,0.1);
   color: #333;
 }
-/* HIDE IN THE FOOTER */
-.footer .dropdown:hover .drop-menu,
+/* Upwards IN THE FOOTER */
+.footer .dropdown:hover .drop-menu {
+  transform: translate(0,-100%);
+  padding: 0 0 1.5em;
+}
+/* upwards triangle in footer */
 .footer .drop-trigger:after {
+  border-color: transparent transparent #fff;
+}
+.footer .dropdown:hover .drop-trigger:after {
+  border-color: transparent transparent #ed6e2f;
+}
+
+.footer .drop-menu:before {
   display: none;
 }
-.footer .drop-trigger {
-  padding-right: 0;
+.footer .drop-menu:after {
+  border: 0.6em solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 1em;
+  bottom: 0.4em;
+  width: 0;
 }
 
 @media (max-width: 800px) {
